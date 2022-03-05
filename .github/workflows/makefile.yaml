@@ -7,7 +7,15 @@ on:
     branchs: [ '*' ]
 
 jobs:
-  make:
+  latest:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: make bin/archy
+      run: make bin/archy
+    - name: make koversion
+      run: make koversion
+  devel:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
