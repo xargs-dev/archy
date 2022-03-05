@@ -8,14 +8,20 @@ on:
 
 jobs:
   latest:
+    strategy:
+      matrix:
+        makerule: [ 'koversion', 'yttversion' ]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: make bin/archy
       run: make bin/archy
-    - name: make koversion
-      run: make koversion
+    - name: make ${{ matrix.makerule }}
+      run: make ${{ matrix.makerule }}
   devel:
+    strategy:
+      matrix:
+        makerule: [ 'koversion', 'yttversion' ]
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -37,5 +43,5 @@ jobs:
     - name: make bin/archy-devel
       run: make bin/archy-devel
     
-    - name: make koversion
-      run: make koversion
+    - name: make ${{ matrix.makerule }}
+      run: make ${{ matrix.makerule }}
