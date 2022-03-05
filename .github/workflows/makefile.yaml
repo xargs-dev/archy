@@ -1,13 +1,13 @@
-name: Build
+name: Makefile
 
 on:
   push:
     branches: [ main ]
   pull_request:
-    branches: ['*']
+    branchs: [ '*' ]
 
 jobs:
-  build:
+  make:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -26,13 +26,8 @@ jobs:
         cp $(which go1.18rc1) $(which go)
         go version
 
-    - name: Mod tidy
-      run: |
-        go mod tidy
-        git diff --exit-code || exit 1
-
-    - name: Build
-      run: go build -v ./...
-
-    - name: Test
-      run: go test -v ./...
+    - name: make bin/archy-devel
+      run: make bin/archy-devel
+    
+    - name: make koversion
+      run: make koversion
