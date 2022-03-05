@@ -1,3 +1,5 @@
+[![Go](https://github.com/xargs-dev/archy/actions/workflows/go.yaml/badge.svg)](https://github.com/xargs-dev/archy/actions/workflows/go.yaml) [![Makefile](https://github.com/xargs-dev/archy/actions/workflows/makefile.yaml/badge.svg)](https://github.com/xargs-dev/archy/actions/workflows/makefile.yaml)
+
 # `archy`
 
 `archy` is an simple binary to determine current kernel and machine architecture, which wraps `uname` and alternatively can read from [Go `runtime` stdlib](https://pkg.go.dev/runtime) for `GOOS` and `GOARCH`.
