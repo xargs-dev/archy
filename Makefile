@@ -10,7 +10,7 @@ ARCH?=$(shell bin/archy -m)
 GOOS?=$(shell bin/archy -s --goruntime)
 GOARCH?=$(shell bin/archy -m --goruntime)
 
-ARCHY_VERSION?=0.1.0
+ARCHY_VERSION?=0.1.1
 KO_VERSION?=0.10.0
 YTT_VERSION?=0.40.1
 
