@@ -3,11 +3,9 @@ package main
 import (
 	"context"
 	"encoding/json"
-	"fmt"
 	"log"
 	"os"
 	"os/signal"
-	"runtime/debug"
 
 	"go.xargs.dev/archy"
 	"go.xargs.dev/archy/option"
@@ -19,7 +17,7 @@ func main() {
 	defer cancel()
 
 	if len(os.Args) >= 2 && os.Args[1] == "version" {
-		version()
+		printVersion()
 		return
 	}
 
@@ -40,13 +38,4 @@ func main() {
 		result.Write([]byte(v.String()))
 		result.Write([]byte("\n"))
 	}
-}
-
-func version() {
-	bi, ok := debug.ReadBuildInfo()
-	if !ok {
-		fmt.Printf("unable to retrieve build info")
-		os.Exit(1)
-	}
-	fmt.Println(bi.Main.Version)
 }
