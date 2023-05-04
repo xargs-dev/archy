@@ -1,4 +1,5 @@
-[![Go](https://github.com/xargs-dev/archy/actions/workflows/go.yaml/badge.svg)](https://github.com/xargs-dev/archy/actions/workflows/go.yaml) [![Makefile](https://github.com/xargs-dev/archy/actions/workflows/makefile.yaml/badge.svg)](https://github.com/xargs-dev/archy/actions/workflows/makefile.yaml)
+[![Go](https://github.com/xargs-dev/archy/actions/workflows/go.yaml/badge.svg)](https://github.com/xargs-dev/archy/actions/workflows/go.yaml) [![Makefile](https://github.com/xargs-dev/archy/actions/workflows/makefile.yaml/badge.svg)](https://github.com/xargs-dev/archy/actions/workflows/makefile.yaml) [![justforfunnoreally.dev badge](https://img.shields.io/badge/justforfunnoreally-dev-9ff)](https://justforfunnoreally.dev)
+
 
 # `archy`
 
